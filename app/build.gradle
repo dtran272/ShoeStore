@@ -2,9 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs'
 
 android {
     compileSdkVersion 30
+    buildFeatures {
+        dataBinding true
+    }
     buildToolsVersion "29.0.1"
     defaultConfig {
         applicationId "com.udacity.shoestore"
@@ -38,6 +42,11 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-rc1'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    // Navigation
+    implementation "android.arch.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "android.arch.navigation:navigation-ui-ktx:$nav_version"
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
