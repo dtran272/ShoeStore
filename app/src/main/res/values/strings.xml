@@ -4,4 +4,7 @@
     <string name="password_text">Password</string>
     <string name="login_text">Login</string>
     <string name="sign_up_text">Sign Up!</string>
+    <string name="welcome_message">This is the one stop shop for all your kicks!\n We are excited to have you on board with us,\n as we continuously drop new releases\n on a weekly basis.\n\n So keep an eye out 👀</string>
+    <string name="welcome_title">Welcome to\n Digital Kicks!</string>
+    <string name="next_text">Next ➡</string>
 </resources>

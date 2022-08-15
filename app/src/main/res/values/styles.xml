@@ -17,6 +17,14 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="buttons">
+        <item name="android:layout_margin">@dimen/margin_half</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
     <style name="login_labels">
         <item name="android:textSize">@dimen/default_text_size</item>
         <item name="android:textAlignment">viewStart</item>
@@ -33,12 +41,9 @@
         <item name="android:minHeight">50dp</item>
     </style>
 
-    <style name="buttons">
-        <item name="android:layout_margin">@dimen/margin_half</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:backgroundTint">@color/colorPrimary</item>
-        <item name="android:textColor">@color/colorAccent</item>
+    <style name="welcome_texts">
+        <item name="android:layout_margin">@dimen/margin_wide</item>
+        <item name="android:textAlignment">center</item>
     </style>
 
 </resources>
