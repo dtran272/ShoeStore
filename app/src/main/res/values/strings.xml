@@ -3,8 +3,11 @@
     <string name="email_text">Email</string>
     <string name="password_text">Password</string>
     <string name="login_text">Login</string>
-    <string name="sign_up_text">Sign Up!</string>
+    <string name="sign_up_button">Sign Up!</string>
     <string name="welcome_message">This is the one stop shop for all your kicks!\n We are excited to have you on board with us,\n as we continuously drop new releases\n on a weekly basis.\n\n So keep an eye out 👀</string>
     <string name="welcome_title">Welcome to\n Digital Kicks!</string>
-    <string name="next_text">Next ➡</string>
+    <string name="next_button">Next ➡</string>
+    <string name="instruction_title">How to shop your kicks!</string>
+    <string name="instruction_message">1. Start by viewing our wide range of kicks!\n 2. Select what you like\n 3. Choose your size\n 4. Go to checkout\n 5. Complete your purchase\n 6. Receive your fresh kicks the next day!</string>
+    <string name="shop_now_button">Shop Now!</string>
 </resources>

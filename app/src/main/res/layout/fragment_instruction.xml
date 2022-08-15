@@ -1,49 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/welcomeTitle"
-            style="@style/welcome_texts"
+            android:id="@+id/instructionTitle"
+            style="@style/instruction_texts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/aldrich"
-            android:text="@string/welcome_title"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="36sp"
+            android:text="@string/instruction_title"
+            android:textSize="25sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/welcomeMessage"
+            app:layout_constraintBottom_toTopOf="@+id/instructionMessage"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
-            android:id="@+id/welcomeMessage"
-            style="@style/welcome_texts"
+            android:id="@+id/instructionMessage"
+            style="@style/instruction_texts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/welcome_message"
+            android:text="@string/instruction_message"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/welcomeTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/instructionTitle" />
 
         <Button
-            android:id="@+id/nextButton"
+            android:id="@+id/shopNowButton"
             style="@style/buttons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/next_button"
+            android:text="@string/shop_now_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/welcomeMessage" />
+            app:layout_constraintTop_toBottomOf="@id/instructionMessage" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
