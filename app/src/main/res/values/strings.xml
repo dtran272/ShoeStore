@@ -14,7 +14,7 @@
     <string name="logout_text">Logout</string>
     <string name="name_text">Name</string>
     <string name="company_text">Company</string>
-    <string name="description_text">Desciption</string>
+    <string name="description_text">Description</string>
     <string name="size_text">Size</string>
     <string name="save_text">Save</string>
     <string name="cancel_text">Cancel</string>

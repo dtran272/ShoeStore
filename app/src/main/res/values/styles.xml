@@ -35,7 +35,7 @@
     <style name="shoe_detail_edit_text">
         <item name="android:layout_margin">@dimen/margin_x_wide</item>
         <item name="android:textSize">@dimen/default_text_size</item>
-        <item name="android:backgroundTint">@color/design_default_color_primary</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
     </style>
 
 
