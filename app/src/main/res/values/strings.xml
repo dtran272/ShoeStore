@@ -11,4 +11,5 @@
     <string name="instruction_message">1. Start by viewing our wide range of kicks!\n 2. Select what you like\n 3. Choose your size\n 4. Go to checkout\n 5. Complete your purchase\n 6. Receive your fresh kicks the next day!</string>
     <string name="shop_now_button">Shop Now!</string>
     <string name="more_details_text">More details</string>
+    <string name="logout_text">Logout</string>
 </resources>
