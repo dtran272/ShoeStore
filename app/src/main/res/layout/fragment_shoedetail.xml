@@ -1,9 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/shoeNameLabel"
+            style="@style/shoe_detail_labels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/shoeName"
+            android:text="@string/name_text"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/shoeName"
+            style="@style/shoe_detail_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/shoeNameLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Air Jordan" />
+
+        <TextView
+            android:id="@+id/companyLabel"
+            style="@style/shoe_detail_labels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/companyName"
+            android:text="@string/company_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoeNameLabel" />
+
+        <EditText
+            android:id="@+id/companyName"
+            style="@style/shoe_detail_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/companyLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Nike" />
+
+        <TextView
+            android:id="@+id/sizeLabel"
+            style="@style/shoe_detail_labels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/size"
+            android:text="@string/size_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/companyLabel" />
+
+        <EditText
+            android:id="@+id/size"
+            style="@style/shoe_detail_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            app:layout_constraintBaseline_toBaselineOf="@+id/sizeLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="10.5" />
+
+        <TextView
+            android:id="@+id/descriptionLabel"
+            style="@style/shoe_detail_labels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/description"
+            android:text="@string/description_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sizeLabel" />
+
+        <EditText
+            android:id="@+id/description"
+            style="@style/shoe_detail_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/descriptionLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="These are Jordan's from Nike" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_x_wide"
+            android:layout_marginVertical="@dimen/margin_half"
+            android:backgroundTint="@color/gray"
+            android:text="@string/cancel_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/saveButton" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_x_wide"
+            android:layout_marginVertical="@dimen/margin_half"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/save_text"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
