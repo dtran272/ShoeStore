@@ -10,6 +10,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoelistBinding
+import timber.log.Timber
 
 class ShoeListFragment : Fragment() {
 
@@ -25,6 +26,10 @@ class ShoeListFragment : Fragment() {
         binding.detailsButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_shoeListFragment_to_shoeDetailFragment))
 
         setHasOptionsMenu(true)
+
+        val args = ShoeListFragmentArgs.fromBundle(requireArguments())
+
+        Timber.i("Shoe name: ${args.newShoe?.name}")
 
         return binding.root
     }

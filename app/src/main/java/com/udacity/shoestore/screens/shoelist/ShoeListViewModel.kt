@@ -12,15 +12,5 @@ class ShoeListViewModel : ViewModel() {
         get() = _shoes
 
     init {
-        _shoes.value = getShoeList()
-    }
-
-    private fun getShoeList(): List<Shoe> {
-        return mutableListOf(
-            Shoe("Air Jordan", 8.0, "Nike", "Air Jordan from Nike"),
-            Shoe("NB 1", 10.0, "New Balances", "NB1 from New Balances"),
-            Shoe("Classic", 10.5, "Vans", "Classic from Vans"),
-            Shoe("CrossFit 1", 9.5, "Reebok", "CrossFit1 from Reebok")
-        )
     }
 }
