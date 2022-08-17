@@ -10,6 +10,7 @@
             type="com.udacity.shoestore.screens.shoedetail.ShoeDetailViewModel" />
     </data>
 
+    <!-- Use of constraint layout to easily align TextView labels with respective EditTextView, via its Baseline and chaining. -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,6 +35,7 @@
             android:ems="10"
             android:inputType="text"
             android:onTextChanged="@{() -> shoeDetailViewModel.onTextChanged()}"
+            android:text="@{shoeDetailViewModel.shoeName}"
             app:layout_constraintBaseline_toBaselineOf="@+id/shoeNameLabel"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="Air Jordan" />
@@ -56,6 +58,7 @@
             android:ems="10"
             android:inputType="text"
             android:onTextChanged="@{() -> shoeDetailViewModel.onTextChanged()}"
+            android:text="@{shoeDetailViewModel.company}"
             app:layout_constraintBaseline_toBaselineOf="@+id/companyLabel"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="Nike" />
@@ -78,6 +81,7 @@
             android:ems="10"
             android:inputType="numberDecimal"
             android:onTextChanged="@{() -> shoeDetailViewModel.onTextChanged()}"
+            android:text="@{shoeDetailViewModel.shoeSize.toString()}"
             app:layout_constraintBaseline_toBaselineOf="@+id/shoeSizeLabel"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="10.5" />
@@ -100,6 +104,7 @@
             android:ems="10"
             android:inputType="text"
             android:onTextChanged="@{() -> shoeDetailViewModel.onTextChanged()}"
+            android:text="@{shoeDetailViewModel.description}"
             app:layout_constraintBaseline_toBaselineOf="@+id/descriptionLabel"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="These are Jordan's from Nike" />

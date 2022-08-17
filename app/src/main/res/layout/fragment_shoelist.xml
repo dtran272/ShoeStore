@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Use of constraint layout to independently place the scroll view and FAB on screen. -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,6 +16,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <!-- Use of linear layout to display a simple list of shoe items. -->
             <LinearLayout
                 android:id="@+id/shoeListLinearLayout"
                 android:layout_width="match_parent"
