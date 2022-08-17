@@ -15,16 +15,16 @@ import timber.log.Timber
 class ShoeListFragment : Fragment() {
 
     private lateinit var binding: FragmentShoelistBinding
-
     private lateinit var viewModel: ShoeListViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoelist, container, false)
         viewModel = ViewModelProvider(this).get(ShoeListViewModel::class.java)
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoelist, container, false)
+        binding.shoeListViewModel = viewModel
+        binding.lifecycleOwner = this
 
-        binding.detailsButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_shoeListFragment_to_shoeDetailFragment))
-
+        setupButtons()
         setHasOptionsMenu(true)
 
         val args = ShoeListFragmentArgs.fromBundle(requireArguments())
@@ -41,5 +41,9 @@ class ShoeListFragment : Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) || super.onOptionsItemSelected(item)
+    }
+
+    private fun setupButtons() {
+        binding.detailsButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_shoeListFragment_to_shoeDetailFragment))
     }
 }

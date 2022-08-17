@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="shoeDetailViewModel"
+            type="com.udacity.shoestore.screens.shoedetail.ShoeDetailViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,6 +33,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
+            android:onTextChanged="@{() -> shoeDetailViewModel.onTextChanged()}"
             app:layout_constraintBaseline_toBaselineOf="@+id/shoeNameLabel"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="Air Jordan" />
@@ -47,28 +55,30 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
+            android:onTextChanged="@{() -> shoeDetailViewModel.onTextChanged()}"
             app:layout_constraintBaseline_toBaselineOf="@+id/companyLabel"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="Nike" />
 
         <TextView
-            android:id="@+id/sizeLabel"
+            android:id="@+id/shoeSizeLabel"
             style="@style/shoe_detail_labels"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:labelFor="@id/size"
+            android:labelFor="@id/shoeSize"
             android:text="@string/size_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/companyLabel" />
 
         <EditText
-            android:id="@+id/size"
+            android:id="@+id/shoeSize"
             style="@style/shoe_detail_edit_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="numberDecimal"
-            app:layout_constraintBaseline_toBaselineOf="@+id/sizeLabel"
+            android:onTextChanged="@{() -> shoeDetailViewModel.onTextChanged()}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/shoeSizeLabel"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="10.5" />
 
@@ -80,7 +90,7 @@
             android:labelFor="@id/description"
             android:text="@string/description_text"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/sizeLabel" />
+            app:layout_constraintTop_toBottomOf="@id/shoeSizeLabel" />
 
         <EditText
             android:id="@+id/description"
@@ -89,6 +99,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
+            android:onTextChanged="@{() -> shoeDetailViewModel.onTextChanged()}"
             app:layout_constraintBaseline_toBaselineOf="@+id/descriptionLabel"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="These are Jordan's from Nike" />
@@ -101,9 +112,9 @@
             android:layout_marginVertical="@dimen/margin_half"
             android:backgroundTint="@color/gray"
             android:text="@string/cancel_text"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/saveButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/saveButton" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/saveButton"
@@ -111,12 +122,15 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_x_wide"
             android:layout_marginVertical="@dimen/margin_half"
+            android:alpha="0.5"
             android:backgroundTint="@color/colorPrimary"
+            android:clickable="false"
+            android:enabled="false"
             android:text="@string/save_text"
             android:textColor="@color/colorAccent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
